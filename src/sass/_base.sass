@@ -1,0 +1,128 @@
+// @import "bourbon"
+
+*
+	box-sizing: border-box
+	&:before, &:after
+		box-sizing: border-box
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: $accent
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-family: "RobotoBold", serif
+
+.accent
+	text-decoration: underline
+	color: $accent
+	&:focus, &:hover
+		text-decoration: none
+		color: $accent
+
+	
+
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+
+
+
+
+h1
+	font-size: 3em
+	line-height: 1.1875em
+	color: #ffffff
+	display: inline-block
+	text-transform: uppercase
+	font-family: "RobotoCondensedLight" ,serif
+
+h2
+	text-transform: uppercase
+	color: #ffffff
+	font-size: 2.5em
+	line-height: 1.125em
+	font-family: "RobotoCondensedBold" ,serif
+
+h3
+	font-size: 17px
+	line-height: 1.5
+	color: $text
+	text-transform: uppercase
+	text-align: center
+	font-family: "RobotoCondensedBold" ,serif
+
+
+.button
+	display: inline-block
+	border: none
+	color: $text
+	text-decoration: none
+	background-color: $accent
+	padding: 10px 35px
+	margin-top: 5px
+	font-size: 1em
+	line-height: 1.5em
+	font-family: "RobotoCondensedBold" ,serif
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	cursor: pointer
+	text-transform: uppercase
+	border-radius: 2px
+	&::after
+		transition: background-color .2s ease
+		position: absolute
+		content: ''
+		height: 4px
+		bottom: 0
+		width: 100%
+		background-color: darken($accent, 50%)
+		opacity: .18
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		left: 0
+	&:focus, &:hover
+		text-decoration: none
+		color: $black
+	&:hover
+		background-color: lighten($accent, 5%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken($accent, 5%)
+		&::after
+			opacity: .32

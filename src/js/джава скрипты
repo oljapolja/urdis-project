@@ -1,0 +1,143 @@
+Скрипты
+
+1) Полавная прокрутка до элемента, по нажатию на кнопку
+
+   $(".arrow-a").click(function (event){ // у ".arrow-a" должен быть 'href' на нужный раздел
+      event.preventDefault();
+
+      var id = $(this).attr('href'),
+      top = $(id).offset().top + 50;
+      
+      
+   // $(".arrow-wrapper").on("click", "a", function (event){ // если ".arrow-wrapper" - это меню, а "a" это кнопка меню
+   //    event.preventDefault();
+   //    var id = $(this).attr('href'),
+   //    top = $(id).offset().top;
+      
+      $('body,html').animate({scrollTop: top}, 1000);
+   });
+
+
+2) Плавный скрол до начала странице, по нажатию на кнопку
+
+$(".up-button").click(function (){
+      
+      $('body,html').animate({scrollTop: 0}, 1000);
+   });
+
+
+3) Стандарт по карусельке
+
+$('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:0,
+      nav:true,
+      navText: "",
+      autoplay: true,
+      autoplayHoverPause:true,
+      smartSpeed: 600,
+      responsive:{
+          0:{
+              items:1
+          }
+      }
+  });
+
+4) Плавное разворачивание свернутого меню на малых экранах
+
+$(".header-menu-toggle__button").click(function(event) {
+      event.preventDefault();
+      $(".header-menu__items").slideToggle();
+   });
+
+5) Плавное разворачивание меню в футере + изменение высоты футера 
+
+$(".footer-menu-toggle__button").click(function(event) {
+      event.preventDefault();
+
+      $(this).toggleClass("on");
+
+      // console.log($(".menu__items").height());
+      // console.log($(".main-footer").height());
+      
+
+      var ph = $(".menu__items").height() + $(".main-footer").height();
+
+      // console.log(ph);
+      
+      if($(".footer-menu-toggle__button").hasClass("on")){      
+         $(".main-footer").height(ph);
+         $('body,html').animate({scrollTop: $(document).height() + $(window).height()}, 1100);
+
+         // console.log($(".menu__items").height());
+         // console.log($(".main-footer").height());
+
+      } else {
+         var ph = $(".main-footer").height() - $(".menu__items").height();
+
+         // console.log($(".menu__items").height());
+         // console.log($(".main-footer").height());
+         // console.log(ph);
+         // console.log(Number.parseInt($(".main-footer").css("padding-top") + $(".main-footer").css("padding-bottom")));
+         
+       //  Number.parseInt(val)
+
+         $(".main-footer").animate({height: ph + Number.parseInt($(".main-footer").css("padding-top") + $(".main-footer").css("padding-bottom"))}, 500);
+      }
+
+      $(".footer-menu__items").slideToggle();
+
+			// var ph = $(".footer-menu-toggle__button").height();
+			// var pdt = $(this).find(".footer-menu__items");
+			// pdt.height(ph);
+   });
+
+
+6) Установить отметку на срабатывание анимации
+
+   var waypoint1 = new Waypoint({
+      element: document.getElementById('benefits-id'), // элемент, докручивая до которого, срабатывает анимация
+      handler: function() {
+         $(".benefits__item-wrapper").each(function(index) {
+            var ths = $(this);
+            setInterval(function() { // устанавливаем интервал на срабатывание
+               ths.removeClass("benefits__item-wrapper-off").addClass("benefits__item-wrapper-on"); // анимация
+            }, 100*index);
+         });
+      },
+      offset: "25%" // срабатывает выше элемента на 25 %
+   });
+
+7) По плагину с animation.css (объяснение в файле плагина)
+
+$(".property-valuation .section-title h2, .property-valuation .section-title p").animated("p-v", "fadeIn");
+
+8) Появлябщееся окно magnific-popup
+
+$(".button-section .button").click(function() {
+      $("#callback .feedback__title").html($(this).text());
+      $("#callback input.enabled").attr("value", $(this).text());
+   }).magnificPopup({
+          type: 'inline',
+          mainClass: 'mfp-fade',
+          fixedContentPos: false
+      });
+
+9)  Форма обратной связи
+
+$(".feedback").submit(function() {
+      $.ajax({
+         type: "GET",
+         url: "mail.php",
+         data: $(this).serialize() // собирает поля формы и отправляет на mail.php
+      }).done(function() {
+         alert("Спасибо за заявку!");
+         setTimeout(function() {
+            $(".feedback").trigger("reset"); // сбрасываем поля формы после сабмита
+            $.fancybox.close();
+         }, 1000);
+      });
+      return false;
+   });
+
+

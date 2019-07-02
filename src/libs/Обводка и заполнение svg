@@ -1,0 +1,37 @@
+1) картинку вставляем в html как svg!!
+
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 291.01178 129" height="129" width="291.01178" version="1.1" id="working-method_svg0">
+	<path class="path" stroke="#f39f18" stroke-width="3" id="path4138-1" d="M 3.4644996,126.28999 3.1137219,4.0613763 l 240.7182181,0 43.11847,58.7692707 -43.28202,63.461773 z" style="fill:#2c3949;fill-opacity:1" />
+</svg>
+
+2) JS
+
+var waypoint3 = new Waypoint({
+      element: document.getElementById('working-method-id'),
+      handler: function() {
+         $(".working-method__item .path").each(function(index) {
+            var ths = $(this);
+            // ths.attr("style", "fill:#f39f18;opacity:1");
+            setInterval(function() {               
+               ths.css({"animation": "dash .9s linear forwards"});
+            }, 800*index);
+         });
+      },
+      offset: "25%"
+   });
+
+
+3) SASS
+
+.path
+    stroke-dasharray: 1000
+    stroke-dashoffset: 1000
+    
+
+@keyframes dash
+    85%
+        fill: #2c3949
+    100%
+        stroke-dashoffset: 0
+        fill: #f39f18
+

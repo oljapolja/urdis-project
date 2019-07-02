@@ -1,0 +1,20 @@
+$default-font: "RobotoRegular", sans-serif
+$accent: #FC0
+$dark-yellow: #cca300
+$blue-dark: #22133E
+$blue-dark-accent: #1c0f32
+$text: #111111
+$black: #0E0B13
+
+// в main прописать у .класса @include clearfix
+@mixin clearfix() 
+  &::after 
+    display: block
+    content: ""
+    clear: both
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px
+$grid-columns: 12
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1200px)

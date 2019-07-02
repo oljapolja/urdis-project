@@ -1,0 +1,45 @@
+{
+  "name": "my_first_gulp_project",
+  "version": "1.0.0",
+  "description": "-//-",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Olga",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-cache": "^1.1.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-pngquant": "^8.0.0"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "animate.css": "^3.7.2",
+    "bootstrap-sass": "^3.4.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1",
+    "jquery-mousewheel": "^3.1.13",
+    "jquery.mmenu": "^7.3.3",
+    "jquery.scrollto": "^2.1.2",
+    "kbw-countdown": "^2.1.1",
+    "magnific-popup": "^1.1.0",
+    "node-bourbon": "^4.2.8",
+    "owl.carousel": "^2.3.4",
+    "superfish": "^1.7.10",
+    "waypoints": "^4.0.1"
+  }
+}
