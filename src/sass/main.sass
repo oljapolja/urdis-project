@@ -4,17 +4,120 @@
 @import "base"
 
 // Пользовательские стили
+
+//верхнее меню
 .menu-line
-    padding: 25px 0 25px
     background-color: $blue-dark
     color: #ffffff
+    font-family: "RobotoCondensedRegular", serif
+    font-size: 16px
+    border-bottom: #2f1a55 1px solid
 
-.menu-line__iteams
-    list-style: none
-    padding-left: 0
+.menu-line__items
     margin-bottom: 0
+        
+.menu-line__items > .menu-line__item > .menu-line__link
+    padding: 25px 30px
 
 
+
+
+ul.menu-line__subitems .menu-line__item,
+ul.menu-line__sub-subitems li.menu-line__item
+    border-bottom: #2f1a55 1px solid
+
+
+
+ul.menu-line__items .menu-line__item,
+ul.menu-line__subitems .menu-line__item,
+ul.menu-line__sub-subitems li.menu-line__item
+    background-color: $blue-dark
+    &:hover, &.active
+        background-color: $blue-dark-accent
+    &.active
+        .menu-line__link
+            color: $accent
+    .menu-line__link
+        color: #ffffff
+        border: none
+        &:hover
+            color: $accent
+            text-decoration: none
+    i
+        margin-left: 10px
+
+
+ul.menu-line__subitems .menu-line__item
+    .menu-line__link
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+
+// кнопка от мастера
+.mobile-menu-link
+    display: none
+
+.toggle-mnu
+    width: 28px
+    height: 28px
+    float: right
+    margin-top: 5px
+    display: none
+    span:after, span:before 
+        content: ""
+        position: absolute
+        left: 0
+        top: 9px
+
+    span:after
+        top: 18px
+
+    span 
+        position: relative
+        display: block
+
+    span, span:after, span:before
+        width: 100%
+        height: 2px
+        background-color: $blue-dark
+        transition: all 0.3s
+        backface-visibility: hidden
+        border-radius: 2px
+
+    &.on span 
+        background-color: transparent
+
+    &.on span:before 
+        transform: rotate(45deg) translate(-1px, 0px)
+
+    &.on span:after 
+        transform: rotate(-45deg) translate(6px, -7px)
+
+
+#mobile-menu
+    font-size: 16px
+    .mm-navbar__title
+        color: $text
+    .menu-line__item
+        background-color: #fff
+        border-bottom: none
+        
+        .menu-line__link
+            color: $text
+            padding: 10px 0 10px 40px
+            i.fa.fa-caret-down , i.fa.fa-caret-right
+                display: none
+        &:nth-child(1) .menu-line__link
+            padding-top: 20px
+            
+
+// .mm-btn_next::after, .mm-btn_prev::before
+//     border: none
+
+.mm-listitem__btn:not(.mm-listitem__text)
+    border: none
+//верхнее меню энд
 
 
 @import "media" // Всегда в конце

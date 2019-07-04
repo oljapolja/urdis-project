@@ -1,29 +1,49 @@
 header.header-section
     .menu-line
+        a(href="#mobile-menu").mobile-menu-link Меню
+        a(href="#mobile-menu").toggle-mnu
+            span
         .container
-            .row
-                .col
-                    .menu-line__iteams-wrapper
-                        ul.menu-line__iteams.sf-menu
-                            li.menu-line__item
+            .row.justify-content-center
+                .col-lg-auto
+                    
+                    .menu-line__items-wrapper
+                        ul.menu-line__items.sf-menu
+                            li.menu-line__item.active
                                 a(href="#").menu-line__link
                                     |Главная
 
                             li.menu-line__item
                                 a(href="#").menu-line__link
-                                    |О Компании
+                                    |О компании
 
                             li.menu-line__item
                                 a(href="#").menu-line__link
-                                    |Услуги и стоимость
-                                    ul.menu-line__subiteams
-                                        li.menu-line__item
+                                    span Услуги и стоимость
+                                    i.fa.fa-caret-down
+                                ul.menu-line__subitems
+
+                                    li.menu-line__item
                                             a(href="#").menu-line__link
                                                 |Элемент 1
 
-                                        li.menu-line__item
-                                            a(href="#").menu-line__link
-                                                |Элемент 3
+                                    li.menu-line__item
+                                        a(href="#").menu-line__link
+                                            |Элемент 2 tooo big
+                                            i.fa.fa-caret-right(aria-hidden="true")
+                                        ul.menu-line__sub-subitems
+                                        
+                                            li.menu-line__item
+                                                a(href="#").menu-line__link
+                                                    |Элемент 1
+
+                                            li.menu-line__item
+                                                a(href="#").menu-line__link
+                                                    |Элемент 3
+
+                                    li.menu-line__item
+                                        a(href="#").menu-line__link
+                                            |Элемент 3
 
                             li.menu-line__item
                                 a(href="#").menu-line__link

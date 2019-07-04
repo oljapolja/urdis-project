@@ -8,6 +8,40 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+    .toggle-mnu
+        display: block
+        position: absolute
+        top: 3px
+        right: 10px
+
+    .mobile-menu-link
+        display: block
+        color: $blue-dark
+        font-family: RobotoRegular,sans-serif
+        text-align: center
+        position: relative
+        &:hover
+            color: $blue-dark
+            text-decoration: none
+
+    .menu-line__items-wrapper
+        display: none
+
+
+
+    .menu-line
+        background-color: $accent
+        border: none
+        padding: 6px 0 5px
+        // &:after
+        //     content: "Меню"
+        //     position: absolute
+        //     display: inline-block
+        //     right: 50%
+        //     transform: translate(50%, 0)
+        //     top: 10px
+        //     color: $blue-dark
+        //     font-family: RobotoRegular,sans-serif
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -26,6 +60,11 @@
 
 // ≤992px
 +media-breakpoint-up(lg)
+    #mobile-menu, html.mm-wrapper_blocking .mm-wrapper__blocker
+        display: none
+
+    .mm-wrapper_opening .mm-menu_offcanvas.mm-menu_opened ~ .mm-slideout
+        transform: translate(0px, 0px)
 
 // ≤1200px
 +media-breakpoint-up(xl)
