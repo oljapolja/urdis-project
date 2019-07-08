@@ -50,5 +50,38 @@ jQuery(document).ready(function() {
       wdt.width(wd);
    });
 
+   $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:0,
+      nav:true,
+      navText: "",
+      // autoplay: true,
+      autoplayHoverPause:true,
+      smartSpeed: 600,
+      responsive:{
+          0:{
+              items:1
+          }
+      }
+  });
+
+  $('.slider-button-prev').click(function() {
+     $('.owl-carousel').trigger("prev.owl");
+  });
+
+  $('.slider-button-next').click(function() {
+   $('.owl-carousel').trigger("next.owl");
+});
+
+
+//   owl.on("mousewheel", ".owl-stage", function (e) {
+//    if (e.deltaY > 0) {
+//       owl.trigger("prev.owl");
+//    } else {
+//       owl.trigger("next.owl");
+//    }
+//    e.preventDefault();
+//    });
+
 
  });

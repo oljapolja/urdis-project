@@ -5,7 +5,7 @@
 
 // Пользовательские стили
 
-//верхнее меню
+//верхнее меню НАЧАЛО
 .menu-line
     background-color: $blue-dark
     color: #ffffff
@@ -63,6 +63,7 @@ ul.menu-line__subitems .menu-line__item
     height: 28px
     float: right
     margin-top: 5px
+    margin-right: 10px
     display: none
     span:after, span:before 
         content: ""
@@ -117,7 +118,204 @@ ul.menu-line__subitems .menu-line__item
 
 .mm-listitem__btn:not(.mm-listitem__text)
     border: none
-//верхнее меню энд
 
 
+//верхнее меню КОНЕЦ
+
+//секция инфо НАЧАЛО
+
+.header-section__company-info
+    color: #fff
+    background-image: url(../img/slide-1.jpg)
+    background-size: cover
+    position: relative
+    z-index: 1
+    &::before
+        content: ""
+        background-color: #22133E
+        display: block
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        position: absolute
+        opacity: .85
+
+.header-section__contact-info
+    background-color: rgba(38,21,70,.8)
+    box-shadow: rgba(255,255,255,.03) 0 5px 0 5px
+    background-size: cover
+    background-position: top center
+    padding: 50px 0 45px
+    position: relative
+    z-index: 1
+    &::before
+        content: ""
+        display: block
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background-image: url(../img/top-pannel-bg.jpg)
+        opacity: .16
+        z-index: 0
+
+.contact-info__title
+    text-transform: uppercase
+    margin-bottom: 12px
+    font-family: RobotoCondensedRegular,sans-serif
+    font-size: 16px
+    &::after
+        content: ""
+        display: block
+        height: 1px
+        background-color: $accent
+        opacity: .4
+        margin-top: 8px
+
+.contact-info__items
+    opacity: .4
+
+.contact-info__icon
+    display: inline-block
+    vertical-align: top
+    margin-right: 8px
+    padding-top: 8px
+    font-size: 16px
+
+.contact-info__item
+    display: inline-block
+    width: auto
+    font-size: 13px
+    line-height: 1.4
+    margin-bottom: 0
+
+
+.connection-info
+    text-align: right
+    span
+        opacity: .4
+        margin-right: 3px
+        font-size: 14px
+
+.connection-info__icon
+    margin-right: 5px
+    font-size: 16px
+
+.connection-info__phone
+    font-size: 20px
+    font-family: "RobotoCondensedRegular", sans-serif
+
+.connection-info__email-link
+    color: #ffffff
+    border-bottom: 1px solid #ffffff
+    margin-bottom: 22px
+    display: inline-block
+    &:hover
+        color: #fff
+        text-decoration: none
+
+.connection-info__button
+    padding: 6px 18px
+    margin-top: 0
+
+
+
+
+//секция инфо КОНЕЦ
+
+
+// секция слайдер НАЧАЛО
+
+.header-section__main-info-slider
+    padding: 70px 0
+
+.main-info-slider__text
+    p
+        font-size: 17px
+        font-family: "RobotoLight", sans-serif
+        margin-bottom: 25px
+
+.main-info-slider__button
+    font-size: 16px
+
+.header-section__main-info-slider
+    .container
+        position: relative
+
+.slider-button
+    font-size: 40px
+    color: #ffffff
+    position: absolute
+    z-index: 10
+    top: 40%
+    cursor: pointer
+    transition: color .3s ease
+    // opacity: .8
+    &:hover
+        // opacity: 1
+        color: $accent
+
+.slider-button-next
+    right: 14px
+
+.owl-dots
+    text-align: center
+
+.owl-carousel button.owl-dot
+    background: #ffffff
+    width: 10px
+    height: 10px
+    border-radius: 10px
+    margin: 0 2px 0 2px
+    &.active
+        background: $accent
+    
+// секция слайдер КОНЕЦ
+
+// секция плюсы НАЧАЛО
+.header-section__capability-line
+    background-color: $blue-dark
+    padding: 28px 0 13px
+    color: #ffffff
+
+.capability-line__item
+    display: flex
+    margin-bottom: 15px
+
+.capability-line__icon
+    margin-right: 15px
+    line-height: 0
+    position: relative
+.capability-line__icon-pic
+    font-size: 50.5px
+    color: $accent
+.capability-line__icon-text
+    position: absolute
+    font-family: "RobotoCondensedBold", sans-serif
+    font-size: 22px
+    top: 25px
+    left: 11px
+    color: $blue-dark
+
+.capability-line__text
+    margin-bottom: 0
+    font-family: "RobotoCondensedLight", sans-serif
+    font-size: 17px
+    line-height: 21px
+
+.capability-line__icon-text-3simbols
+    left: 7px
+    top: 27px
+    font-size: 20px
+
+.capability-line__icon-text-1simbols
+    left: 18px
+
+
+
+
+
+// секция плюсы КОНЕЦ
 @import "media" // Всегда в конце
