@@ -76,6 +76,7 @@ jQuery(document).ready(function() {
 
    // $(".services-section__item-image").equalHeights();
    $(".services-section__item-title").equalHeights();
+   $(".news-section__text-area").equalHeights();
 
 
  });

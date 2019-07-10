@@ -257,7 +257,7 @@ ul.menu-line__subitems .menu-line__item
         
 
 
-.main-info-slider__button
+.big__button
     font-size: 16px
 
 .main-info-slider__image
@@ -375,7 +375,11 @@ ul.menu-line__subitems .menu-line__item
             i
                 margin: 0 4px 0 4px
                 transition: all .3s ease
-        .services-section__item-image
+
+.services-section__item,
+.news-section__item
+    &:hover
+        .section-item-image
             &::after
                 content: ""
                 display: block
@@ -391,7 +395,7 @@ ul.menu-line__subitems .menu-line__item
 
                 
 
-.services-section__item-image
+.section-item-image
     width: 100%
     height: 173px
     background-size: cover
@@ -408,7 +412,7 @@ ul.menu-line__subitems .menu-line__item
         opacity: .4
         display: none
 
-.services-section__item-title
+.section-item-title
     text-transform: uppercase
     margin: 30px 0 10px
     font-size: 18px
@@ -435,5 +439,46 @@ ul.menu-line__subitems .menu-line__item
     margin-bottom: 20px
 
 
+
+
 // секция УСЛУГИ КОНЕЦ 
+
+// секция НОВОСТИ НАЧАЛО
+.news-section
+    background-image: url(../img/news-bg.jpg)
+    position: relative
+    &::before
+        content: ""
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        background-color: $blue-dark
+        opacity: .85
+
+.news-section__title-button
+    margin-bottom: 30px
+
+.news-section__item
+    background-color: $gray
+    border: 1px solid #ffffff
+    text-align: center
+    
+.news-section__text-area
+    padding: 0 20px
+    
+.news-section__item-title
+    font-size: 17px
+
+.news-section__item-text
+    font-size: 15px
+
+.news-section__item-button
+    margin: 20px 0 21px
+
+
+.news-section__item-title
+    margin: 22px 0 12px 
+// секция НОВОСТИ КОНЕЦ 
 @import "media" // Всегда в конце

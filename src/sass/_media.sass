@@ -92,9 +92,24 @@
                     border: 5px solid $accent
                     // border-left: 5px solid $accent
                     // border-right: 5px solid $accent
+    
+    .news-section__title
+        display: flex
+        align-items: flex-start
+        flex-wrap: wrap
+        h2
+            display: inline-block
+            margin-right: 20px
+            margin-top: 0
+            margin-bottom: 20px
+
+    .news-section__title-button
+        margin-top: 0
 
 // ≥768px
 +media-breakpoint-down(sm)
+    .news-section__item
+        margin-bottom: 30px
 
 // ≥576px
 +media-breakpoint-down(xs)
