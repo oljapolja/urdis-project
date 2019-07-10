@@ -74,14 +74,8 @@ jQuery(document).ready(function() {
 });
 
 
-//   owl.on("mousewheel", ".owl-stage", function (e) {
-//    if (e.deltaY > 0) {
-//       owl.trigger("prev.owl");
-//    } else {
-//       owl.trigger("next.owl");
-//    }
-//    e.preventDefault();
-//    });
+   // $(".services-section__item-image").equalHeights();
+   $(".services-section__item-title").equalHeights();
 
 
  });

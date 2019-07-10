@@ -48,7 +48,9 @@ const paths = {
    	        'node_modules/kbw-countdown/dist/js/jquery.countdown-ru.js',
    	        'node_modules/superfish/dist/js/superfish.min.js',
    	        'node_modules/jquery.mmenu/dist/jquery.mmenu.all.js',
+//   	        'node_modules/jquery-equalheights/jquery.equalheights.min.js',
   	        'src/libs/animate-css.js',
+  	        'src/libs/jQuery.equalHeights-master/jquery.equalheights.min.js',
    	        'src/libs/landing-nav/navigation.js' //кастомный "библиотек" подключаем из папки
 //		'src/libs/drawfillsvg.min.js'//кастомный "библиотек" подключаем из папки
         ],

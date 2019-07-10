@@ -32,6 +32,7 @@
     "bootstrap-sass": "^3.4.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
+    "jquery-equalheights": "^1.0.6",
     "jquery-mousewheel": "^3.1.13",
     "jquery.mmenu": "^7.3.3",
     "jquery.scrollto": "^2.1.2",

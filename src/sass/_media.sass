@@ -81,6 +81,18 @@
     .connection-info__email,
         display: none
 
+    .services-section__items
+        .col-lg-3:nth-child(1), .col-lg-3:nth-child(5),
+        .col-lg-3:nth-child(4), .col-lg-3:nth-child(8)
+            .services-section__item
+                border: 5px solid #2f1a55
+                // border-left: 10px solid #2f1a55
+                // border-right: 10px solid #2f1a55
+                &:hover
+                    border: 5px solid $accent
+                    // border-left: 5px solid $accent
+                    // border-right: 5px solid $accent
+
 // ≥768px
 +media-breakpoint-down(sm)
 
