@@ -481,4 +481,52 @@ ul.menu-line__subitems .menu-line__item
 .news-section__item-title
     margin: 22px 0 12px 
 // секция НОВОСТИ КОНЕЦ 
+
+// секция Ссылки на гос. порталы НАЧАЛО
+.goverment-portals-section
+    background-color: $gray
+
+.goverment-portals-section__title
+    h2
+        color: $text
+
+.goverment-portals-section__item-link-wrap
+    display: block
+    // justify-content: space-between
+    // align-items: center
+    margin: 15px 0
+    padding: 14px
+    border: solid $accent 4px
+    background-color: #fff
+    &:hover
+        text-decoration: none
+        .goverment-portals-section__item-title
+            text-decoration: none
+            color: #23527c
+
+.goverment-portals-section__item
+    display: flex
+    // justify-content: space-between
+    align-items: center
+
+.goverment-portals-section__item-icon
+    background-image: url(../img/rus.svg)
+    width: 34px
+    background-repeat: no-repeat
+    flex-shrink: 0
+    height: 36px
+    margin-right: 10px
+    background-size: contain
+
+.goverment-portals-section__item-title
+    margin: 0
+    font-size: 16px
+    text-decoration: underline
+    line-height: 18px
+    color: $text
+    display: block
+
+
+// секция Ссылки на гос. порталы КОНЕЦ 
+
 @import "media" // Всегда в конце
