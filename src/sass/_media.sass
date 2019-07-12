@@ -75,11 +75,13 @@
 
     .header-section__contact-info
         padding: 30px 0px
-    .logo-img
-        width: 120px
+        .connection-info__email
+            display: none
+        
+        .logo__img
+            width: 120px
 
-    .connection-info__email,
-        display: none
+    
 
     .services-section__items
         .col-lg-3:nth-child(1), .col-lg-3:nth-child(5),
@@ -106,6 +108,18 @@
     .news-section__title-button
         margin-top: 0
 
+    .footer-section__contact-info
+        .partner-logo
+            margin-top: 30px
+
+    .footer-section__logo
+        .logo__img
+            max-width: 140px
+
+    .footer-section__adress-info
+        .contact-info__icon
+            padding-top: 3px
+
 // ≥768px
 +media-breakpoint-down(sm)
     .news-section__item
@@ -113,11 +127,19 @@
 
 // ≥576px
 +media-breakpoint-down(xs)
+    .general-section
+        padding: 40px 0
+
+    .footer-section
+        padding: 50px 0
+
+    h2
+        font-size: 2.5em
+
     .header-section__contact-info
         padding: 20px 0px
-
-    .logo-img
-        width: 102px
+        .logo__img
+            width: 102px
 
     .header-section__capability-line
         padding: 25px 0 15px
@@ -137,6 +159,19 @@
             font-size: 34px
         p
             font-size: 16px
+
+
+    .footer-section__logo
+        p
+            // max-width: 350px
+            margin-bottom: 30px
+
+    .partner-logo
+        display: none
+
+    .footer-section__contact-info
+        .connection-info
+            margin-bottom: 20px
 
 
 /*==========  Mobile First  ==========*/
