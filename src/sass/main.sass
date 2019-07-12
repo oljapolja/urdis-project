@@ -467,6 +467,7 @@ ul.menu-line__subitems .menu-line__item
     
 .news-section__text-area
     padding: 0 20px
+    margin-bottom: 20px
     
 .news-section__item-title
     font-size: 17px
@@ -475,7 +476,7 @@ ul.menu-line__subitems .menu-line__item
     font-size: 15px
 
 .news-section__item-button
-    margin: 20px 0 21px
+    margin: 0 0 21px
 
 
 .news-section__item-title
@@ -610,5 +611,92 @@ ul.menu-line__subitems .menu-line__item
 
 
 // секция Подвал КОНЕЦ 
+
+// inside страница Начало
+
+.header-inside-section
+    .header-section__main-info-slider
+        padding: 45px 0 25px
+    .owl-carousel button.owl-dot, .owl-nav
+        display: none
+    .slider-button
+        top: 30%
+    h1
+        font-size: 39px
+        display: block
+        margin-bottom: 10px
+
+.article-section
+    h2
+        color: $text
+        font-size: 34px
+        line-height: 42px
+        margin-bottom: 20px
+        margin-top: 0
+    .article__text
+        p
+            margin: 17px 0
+            font-size: 17px
+
+    .services-section__item
+         &:hover
+            .section-item-image
+                &::after
+                    content: none
+
+.another-services
+    margin: 30px 0
+    h3
+        font-size: 24px
+        text-align: left
+        margin-bottom: 10px
+        &::after
+            content: ""
+            display: block
+            height: 1px
+            background-color: $accent
+            opacity: .4
+            margin-top: 8px
+
+.another-services__items
+    margin: 0
+    padding: 0
+    list-style: none
+    font-size: 14px
+    text-transform: uppercase
+
+.another-services__item
+    border-bottom: #f0f0f0 1px solid
+    padding: 8px 8px
+    &.accent
+        background-color: $accent
+        font-family: "RobotoBold", sans-serif
+        .another-servises-link, .another-servises-icon
+            color: #fff
+        .another-servises-icon
+            opacity: .8
+
+
+.another-servises-link
+    display: flex
+    color: $text
+    &:hover
+        color: $text
+        text-decoration: none
+        span
+            text-decoration: underline
+
+.another-servises-icon
+    padding-top: 3px
+    color: $accent
+    font-size: 15px
+    margin-right: 8px
+    &:hover
+        
+
+
+    
+
+
 
 @import "media" // Всегда в конце
