@@ -194,7 +194,7 @@ ul.menu-line__subitems .menu-line__item
 
 .connection-info
     text-align: right
-    span
+    span.light-color
         opacity: .4
         margin-right: 3px
         font-size: 14px
@@ -627,7 +627,7 @@ ul.menu-line__subitems .menu-line__item
         margin-bottom: 10px
 
 .article-section
-    h2
+    .h2
         color: $text
         font-size: 34px
         line-height: 42px
@@ -692,7 +692,79 @@ ul.menu-line__subitems .menu-line__item
     font-size: 15px
     margin-right: 8px
     &:hover
-        
+
+
+// всплывающая форма обратной связи
+.feedback
+    padding: 35px 30px 35px 30px
+    border-bottom: 4px solid $blue-dark-accent
+    color: #97a4b2
+    font-size: 13px
+
+.feedback__text-wrapper
+    padding-left: 10px
+.feedback__title
+    z-index: 10000
+    color: #ffffff
+    font-size: 28px
+    font-family: serif
+    margin-bottom: 18px
+.feedback__text
+    margin-bottom: 25px
+.feedback__name, .feedback__phone
+    width: 100%
+    letter-spacing: 1px
+    input
+        display: block
+        margin-top: 8px
+        background-color: lighten(#22133E, 10%)
+        border: none
+        border-top: 4px solid $blue-dark-accent
+        width: 100%
+        height: 45px
+        padding-left: 10px
+        color: #ffffff
+        transition: border-top .4s ease
+        font-size: 16px
+        &:focus
+            border-top: 3px solid $accent
+.feedback__button-wrapper
+    text-align: center
+    padding-top: 20px
+
+#callback
+    width: 300px
+    position: relative
+    margin: auto
+    background-color: $blue-dark
+    .feedback__title
+        line-height: 30px
+        font-size: 25px
+    .mfp-close
+        color: #ffffff
+
+    .success
+        padding: 35px 30px 35px 30px
+        font-size: 18px
+        text-transform: uppercase
+        position: absolute
+        height: 100%
+        width: 100%
+        left: 0
+        top: 0
+        background-color: $blue-dark
+        color: #fff
+        z-index: 2
+        text-align: center
+        align-items: center
+        font-family: "RobotoCondensedBold" ,serif
+        display: none
+        span
+            color: #97a4b2
+            font-size: 17px
+        &.visible
+            display: flex
+
 
 
     

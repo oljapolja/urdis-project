@@ -36,6 +36,25 @@ html(lang="en")
 			include sections/_goverment-portals-section
 			include sections/_footer
 
+			.hidden
+				form.feedback(id="callback")
+
+					.feedback__text-wrapper
+						.feedback__title Заказать звонок
+
+					label.feedback__name
+						| Ваше имя:
+						input(type="text" name="persons_name" required)
+
+					label.feedback__phone
+						| Ваш телефон:
+						input(type="text" name="persons_phone" required)
+					
+					.feedback__button-wrapper
+						button.feedback__button.button(type="submit") Отправить
+
+					input(type="hidden" value="" name="form").formname
+
 			script(src="js/libs.min.js")
 
 

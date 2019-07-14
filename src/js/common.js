@@ -71,13 +71,47 @@ jQuery(document).ready(function() {
 
   $('.slider-button-next').click(function() {
    $('.owl-carousel').trigger("next.owl");
-});
+   });
 
 
    // $(".services-section__item-image").equalHeights();
    $(".services-section__item-title").equalHeights();
    $(".news-section__text-area").equalHeights();
    $(".goverment-portals-section__item").equalHeights();
+
+
+   $(".connection-info__button").click(function() {
+      $("#callback input.formname").attr("value", $(this).data("form"));
+      }).magnificPopup({
+         type: 'inline',
+         mainClass: 'mfp-fade',
+         fixedContentPos: false
+   });
+
+   $(".feedback").submit(function() {
+      $.ajax({
+         type: "GET",
+         url: "mail.php",
+         data: $(this).serialize() // собирает поля формы и отправляет на mail.php
+      }).done(function() {
+         $(".success").addClass("visible");
+         setTimeout(function() {
+            $(".feedback").trigger("reset"); // сбрасываем поля формы после сабмита
+            $(".success").removeClass("visible");
+            $.magnificPopup.close();
+         }, 2000);
+      });
+      return false;
+   });
+
+      // $(".button-section .button").click(function() {
+      //    $("#callback .feedback__title").html($(this).text());
+      //    $("#callback input.enabled").attr("value", $(this).text());
+      // }).magnificPopup({
+      //        type: 'inline',
+      //        mainClass: 'mfp-fade',
+      //        fixedContentPos: false
+      //    });
    
 
 

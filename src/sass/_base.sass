@@ -53,9 +53,10 @@ b, strong
 	// 	color: $accent
 
 	
+.hidden
+	display: none
 
-
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6, .h2
 	font-weight: normal
 	font-family: "RobotoCondensedBold", serif
 
@@ -71,7 +72,7 @@ h1
 	font-family: "RobotoCondensedLight" ,serif
 	margin-bottom: 20px
 
-h2
+h2, .h2
 	text-transform: uppercase
 	color: #ffffff
 	font-size: 3.05em
@@ -130,3 +131,7 @@ h3
 		background-color: darken($accent, 5%)
 		&::after
 			opacity: .32
+
+
+.white-space
+	white-space: nowrap
